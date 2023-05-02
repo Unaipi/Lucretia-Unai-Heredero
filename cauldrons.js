@@ -1144,6 +1144,47 @@ const data = {
 
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
+    console.log("*********************Ejercicio 6: ")
+for(i=0 ; i<winterCauldronQuantity ; i++) 
+    {
+        if( cauldrons.winter_seasson[i].name == "Brassicaceae") 
+        {
+            console.log("****************")
+            console.log(cauldrons.winter_seasson[i].id)
+            console.log(cauldrons.winter_seasson[i].magic_description)
+
+        }
+    }
+    
+    for(i=0 ; i<summerCauldronQuantity ; i++) 
+    {
+        if( cauldrons.summer_seasson[i].name == "Brassicaceae") 
+        {
+            console.log("****************")
+            console.log(cauldrons.winter_seasson[i].id)
+            console.log(cauldrons.winter_seasson[i].magic_description)
+        }
+    }   
+    
+    for(i=0 ; i<springCauldronQuantity ; i++) 
+    {
+        if( cauldrons.spring_seasson[i].name == "Brassicaceae") 
+        {
+            console.log("****************")
+            console.log(cauldrons.winter_seasson[i].id)
+            console.log(cauldrons.winter_seasson[i].magic_description)
+        }
+    }   
+    for(i=0 ; i<autumnCauldronQuantity ; i++) 
+    {
+        if( cauldrons.autumn_seasson[i].name == "Brassicaceae") 
+        {
+            console.log("****************")
+            console.log(cauldrons.winter_seasson[i].id)
+            console.log(cauldrons.winter_seasson[i].magic_description)
+        }
+    }
+    console.log("****************")
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"

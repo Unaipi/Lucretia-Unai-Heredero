@@ -1026,7 +1026,6 @@ const data = {
 // 2- Mostrar la cantidad de cauldrons separados por temporada
 
     console.log("*********************Ejercicio 2: ");
-    console.log(Object.keys(cauldrons)[3]);
     console.log("winter: "+winterCauldronQuantity);
     console.log("summer: "+summerCauldronQuantity);
     console.log("spring: "+springCauldronQuantity);

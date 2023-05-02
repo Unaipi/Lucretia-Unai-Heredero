@@ -1103,8 +1103,44 @@ const data = {
             console.log(cauldrons.autumn_seasson[i].color)
         }
     }
-    
+
 // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
+    console.log("*********************Ejercicio 5: ")
+
+    let woodTypeQuantity = 0;
+
+    for(i=0 ; i<winterCauldronQuantity ; i++) 
+    {
+        if( cauldrons.winter_seasson[i].type=="wood" && cauldrons.winter_seasson[i].damaged == true) 
+        {
+            woodTypeQuantity++; 
+        }
+    }
+
+    for(i=0 ; i<summerCauldronQuantity ; i++) 
+    {
+        if( cauldrons.summer_seasson[i].type=="wood" && cauldrons.summer_seasson[i].damaged == true) 
+        {
+            woodTypeQuantity++; 
+        }
+    }
+
+    for(i=0 ; i<springCauldronQuantity ; i++) 
+    {
+        if( cauldrons.spring_seasson[i].type=="wood" && cauldrons.spring_seasson[i].damaged == true) 
+        {
+            woodTypeQuantity++; 
+        }
+    }
+
+    for(i=0 ; i<autumnCauldronQuantity ; i++) 
+    {
+        if( cauldrons.autumn_seasson[i].type=="wood" && cauldrons.autumn_seasson[i].damaged == true) 
+        {
+            woodTypeQuantity++; 
+        }
+    }
+    console.log(woodTypeQuantity);
 
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 

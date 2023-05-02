@@ -1010,9 +1010,18 @@ const data = {
         ]
     }
 }
+    const cauldrons = data.cauldrons;
+    
+    const winterCauldronQuantity = cauldrons.winter_seasson.length;
+    const summerCauldronQuantity = cauldrons.summer_seasson.length;
+    const springCauldronQuantity = cauldrons.spring_seasson.length;
+    const autumnCauldronQuantity = cauldrons.autumn_seasson.length;
 
 
 // 1.- Mostrar la cantidad total de cauldrons
+
+    let cauldronQuantity = (winterCauldronQuantity + summerCauldronQuantity + springCauldronQuantity + autumnCauldronQuantity);
+    console.log("*********************Ejercicio 1: "+ cauldronQuantity);
 
 // 2- Mostrar la cantidad de cauldrons separados por temporada
 

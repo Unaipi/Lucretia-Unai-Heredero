@@ -1016,305 +1016,174 @@ const data = {
     const summerCauldronQuantity = cauldrons.summer_seasson.length;
     const springCauldronQuantity = cauldrons.spring_seasson.length;
     const autumnCauldronQuantity = cauldrons.autumn_seasson.length;
+    const cauldronQuantity = (winterCauldronQuantity + summerCauldronQuantity + springCauldronQuantity + autumnCauldronQuantity);
 
+    const totalCauldrons = [cauldrons.winter_seasson, cauldrons.summer_seasson, cauldrons.spring_seasson, cauldrons.autumn_seasson]
+
+    const winter = 0;
+    const summer = 1;
+    const spring = 2;
+    const autumn = 3;
+
+    console.log(totalCauldrons[winter][1].id)
 
 // 1.- Mostrar la cantidad total de cauldrons
 
-    let cauldronQuantity = (winterCauldronQuantity + summerCauldronQuantity + springCauldronQuantity + autumnCauldronQuantity);
-//     console.log("*********************Ejercicio 1: "+ cauldronQuantity);
+    console.log("*********************Ejercicio 1: "+ cauldronQuantity);
 
 // // 2- Mostrar la cantidad de cauldrons separados por temporada
 
-//     console.log("*********************Ejercicio 2: ");
-//     console.log("winter: "+winterCauldronQuantity);
-//     console.log("summer: "+summerCauldronQuantity);
-//     console.log("spring: "+springCauldronQuantity);
-//     console.log("autumn: "+autumnCauldronQuantity);
+    console.log("*********************Ejercicio 2: ");
+    console.log("winter: "+winterCauldronQuantity);
+    console.log("summer: "+summerCauldronQuantity);
+    console.log("spring: "+springCauldronQuantity);
+    console.log("autumn: "+autumnCauldronQuantity);
 
 // // 3.- Mostrar los Cauldrons rotos separados por temporada
 
-//     console.log("*********************Ejercicio 3: ");
+ console.log("*********************Ejercicio 3: ");
 //     console.log("*********************Winter: ");
-//     for(i=0 ; i<winterCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.winter_seasson[i].damaged==true) 
-//         {
-//             console.log(cauldrons.winter_seasson[i].name)
-//         }
-//     }
-
-//     console.log("*********************Summer: ");
-//     for(i=0 ; i<summerCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.summer_seasson[i].damaged==true) 
-//         {
-//             console.log(cauldrons.summer_seasson[i].name)
-//         }
-//     }
-    
-//     console.log("*********************Spring: ");
-//     for(i=0 ; i<springCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.spring_seasson[i].damaged==true) 
-//         {
-//             console.log(cauldrons.spring_seasson[i].name)
-//         }
-//     }
-//     console.log("*********************Autumn: ");
-//     for(i=0 ; i<autumnCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.autumn_seasson[i].damaged==true) 
-//         {
-//             console.log(cauldrons.autumn_seasson[i].name)
-//         }
-//     }
+    let season = ["winter", "summer", "spring", "autumn"];
+    let damagedCauldrons = [];
+    for(let i=0 ; i<totalCauldrons.length ; i++) 
+    {
+        for(let j=0 ; j<totalCauldrons[i].length; j++)
+        {
+            if( totalCauldrons[i][j].damaged==true) 
+            { 
+                //console.log(totalCauldrons[i].length)
+                damagedCauldrons.push(totalCauldrons[i][j])
+            }
+        }
+        console.log(season[i]+": ")
+        console.log(damagedCauldrons.length)   
+        damagedCauldrons.splice(0)
+    }
 
 // // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
  
-//     console.log("*********************Ejercicio 4: ")
-//     for(i=0 ; i<winterCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.winter_seasson[i].magic_description=="Naproxen") 
-//         {
-//             console.log(cauldrons.winter_seasson[i].color)
-//         }
-//     }
-    
-//     for(i=0 ; i<summerCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.summer_seasson[i].magic_description=="Naproxen") 
-//         {
-//             console.log(cauldrons.summer_seasson[i].color)
-//         }
-//     }   
-    
-//     for(i=0 ; i<springCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.spring_seasson[i].magic_description=="Naproxen") 
-//         {
-//             console.log(cauldrons.spring_seasson[i].color)
-//         }
-//     }   
-//     for(i=0 ; i<autumnCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.autumn_seasson[i].magic_description=="Naproxen") 
-//         {
-//             console.log(cauldrons.autumn_seasson[i].color)
-//         }
-//     }
+    console.log("*********************Ejercicio 4: ");
+        for(let i=0 ; i<totalCauldrons.length ; i++) 
+        {
+            for(let j=0 ; j<totalCauldrons[i].length; j++)
+            {
+                if( totalCauldrons[i][j].magic_description=="Naproxen") 
+                { 
+                    console.log(totalCauldrons[i][j].color)     
+                }
+            }
+        }
 
 // // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
-//     console.log("*********************Ejercicio 5: ")
+     console.log("*********************Ejercicio 5: ")
+        let woodenBrokenCauldron = 0
+     for(let i=0 ; i<totalCauldrons.length ; i++) 
+     {
+         for(let j=0 ; j<totalCauldrons[i].length; j++)
+         {
+             if( totalCauldrons[i][j].type=="Wood" && totalCauldrons[i][j].damaged==true) 
+             { 
+                 woodenBrokenCauldron++   
+             }
+         }
+     }
+     console.log("Broken Wooden Cauldrons: "+ woodenBrokenCauldron)
+     
 
-//     let woodTypeQuantity = 0;
-
-//     for(i=0 ; i<winterCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.winter_seasson[i].type=="wood" && cauldrons.winter_seasson[i].damaged == true) 
-//         {
-//             woodTypeQuantity++; 
-//         }
-//     }
-
-//     for(i=0 ; i<summerCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.summer_seasson[i].type=="wood" && cauldrons.summer_seasson[i].damaged == true) 
-//         {
-//             woodTypeQuantity++; 
-//         }
-//     }
-
-//     for(i=0 ; i<springCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.spring_seasson[i].type=="wood" && cauldrons.spring_seasson[i].damaged == true) 
-//         {
-//             woodTypeQuantity++; 
-//         }
-//     }
-
-//     for(i=0 ; i<autumnCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.autumn_seasson[i].type=="wood" && cauldrons.autumn_seasson[i].damaged == true) 
-//         {
-//             woodTypeQuantity++; 
-//         }
-//     }
-//     console.log(woodTypeQuantity);
 
 // // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
-//     console.log("*********************Ejercicio 6: ")
-//     for(i=0 ; i<winterCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.winter_seasson[i].name == "Brassicaceae") 
-//         {
-//             console.log("****************")
-//             console.log(cauldrons.winter_seasson[i].id)
-//             console.log(cauldrons.winter_seasson[i].magic_description)
+     console.log("*********************Ejercicio 6: ")
 
-//         }
-//     }
-    
-//     for(i=0 ; i<summerCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.summer_seasson[i].name == "Brassicaceae") 
-//         {
-//             console.log("****************")
-//             console.log(cauldrons.winter_seasson[i].id)
-//             console.log(cauldrons.winter_seasson[i].magic_description)
-//         }
-//     }   
-    
-//     for(i=0 ; i<springCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.spring_seasson[i].name == "Brassicaceae") 
-//         {
-//             console.log("****************")
-//             console.log(cauldrons.winter_seasson[i].id)
-//             console.log(cauldrons.winter_seasson[i].magic_description)
-//         }
-//     }   
-//     for(i=0 ; i<autumnCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.autumn_seasson[i].name == "Brassicaceae") 
-//         {
-//             console.log("****************")
-//             console.log(cauldrons.winter_seasson[i].id)
-//             console.log(cauldrons.winter_seasson[i].magic_description)
-//         }
-//     }
-//     console.log("****************")
+     for(let i=0 ; i<totalCauldrons.length ; i++) 
+     {
+         for(let j=0 ; j<totalCauldrons[i].length; j++)
+         {
+             if( totalCauldrons[i][j].name=="Brassicaceae") 
+             { 
+                console.log("id: "+totalCauldrons[i][j].id) 
+                console.log("magic_description: "+totalCauldrons[i][j].magic_description)
+                console.log("*******************")
+             }
+         }
+     }
+
+
 // // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
-//     console.log("*********************Ejercicio 7: ")
+    console.log("*********************Ejercicio 7: ")
+    let brokenCauldronQuantity = 0
+    for(let i=0 ; i<totalCauldrons.length ; i++) 
+    {
+        for(let j=0 ; j<totalCauldrons[i].length; j++)
+        {
+            if( totalCauldrons[i][j].damaged==true) 
+            { 
+                brokenCauldronQuantity++
+            }
+        }
+        console.log(season[i]+": ")
+        console.log(Math.floor(brokenCauldronQuantity / totalCauldrons[i].length * 100)+"%") 
+        brokenCauldronQuantity = 0;
+        
+    }
 
-//     let brokenCauldronQuantity= 0;
-//     console.log("WINTER: ")
-//     for(i=0 ; i<winterCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.winter_seasson[i].damaged == true) 
-//         {
-//             brokenCauldronQuantity++;
-//         }
-//     }
-//     console.log(Math.floor((brokenCauldronQuantity / winterCauldronQuantity) * 100)+"%")
-//     brokenCauldronQuantity = 0
-
-//     console.log("SUMMER: ")    
-//     for(i=0 ; i<summerCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.summer_seasson[i].damaged == true) 
-//         {
-//             brokenCauldronQuantity++;
-//         }
-//     }   
-//     console.log(Math.floor((brokenCauldronQuantity / summerCauldronQuantity) * 100)+"%")
-//     brokenCauldronQuantity = 0
-
-//     console.log("SPRING: ")
-//     for(i=0 ; i<springCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.spring_seasson[i].damaged == true) 
-//         {
-//             brokenCauldronQuantity++;
-//         }
-//     }   
-//     console.log(Math.floor((brokenCauldronQuantity / springCauldronQuantity) * 100)+"%")
-//     brokenCauldronQuantity = 0
-
-//     console.log("AUTUMN: ")
-//     for(i=0 ; i<autumnCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.autumn_seasson[i].damaged == true) 
-//         {
-//             brokenCauldronQuantity++;
-//         }
-//     }
-
-//     console.log(Math.floor((brokenCauldronQuantity / autumnCauldronQuantity) * 100)+"%")
 // // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
-//     console.log("*********************Ejercicio 7: ")
+     console.log("*********************Ejercicio 8: ")
 
-//     let plexiglassCauldronQuantity = 0;
-//     for(i=0 ; i<winterCauldronQuantity ; i++) 
-//     {
-//         if( cauldrons.winter_seasson[i].type == "Plexiglass") 
-//         {
-//             plexiglassCauldronQuantity++;
-//         }
-//     }
-//     console.log(Math.floor((plexiglassCauldronQuantity / winterCauldronQuantity) * 100)+"%")
+     let plexiglassCauldronQuantity = 0;
+     for(let i=0 ; i<totalCauldrons[winter].length ; i++) 
+     {
+        if( totalCauldrons[winter][i].type=="Plexiglass") 
+        { 
+            plexiglassCauldronQuantity++
+        }
+         
+     }
+     console.log("Plexiglass Cauldrons in Winter Season: "+Math.floor((plexiglassCauldronQuantity / totalCauldrons[winter].length) * 100)+"%")
+
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
     console.log("*********************Ejercicio 9: ")
-    let orangeNotDamagedCauldrons = 0
-    for(i=0 ; i<winterCauldronQuantity ; i++) 
+    let orangeNotDamagedCauldrons = 0;
+
+    for(let i=0 ; i<totalCauldrons.length ; i++) 
     {
-        if( cauldrons.winter_seasson[i].damaged == false && cauldrons.winter_seasson[i].color == "Orange") 
+        for(let j=0 ; j<totalCauldrons[i].length; j++)
         {
-            orangeNotDamagedCauldrons++;
-        }
+            if( totalCauldrons[i][j].damaged==false && totalCauldrons[i][j].color == "Orange") 
+            { 
+                orangeNotDamagedCauldrons++
+            }
+        }   
     }
-    
-    for(i=0 ; i<summerCauldronQuantity ; i++) 
-    {
-        if( cauldrons.summer_seasson[i].damaged == false && cauldrons.summer_seasson[i].color == "Orange") 
-        {
-            orangeNotDamagedCauldrons++;
-        }
-    }   
-    
-    for(i=0 ; i<springCauldronQuantity ; i++) 
-    {
-        if( cauldrons.spring_seasson[i].damaged == false && cauldrons.spring_seasson[i].color == "Orange") 
-        {
-            orangeNotDamagedCauldrons++;
-        }
-    }   
-    for(i=0 ; i<autumnCauldronQuantity ; i++) 
-    {
-        if( cauldrons.autumn_seasson[i].damaged == false && cauldrons.autumn_seasson[i].color == "Orange") 
-        {
-            orangeNotDamagedCauldrons++;
-        }
-    }
-    console.log(orangeNotDamagedCauldrons)
+    console.log("Orange Not Damaged Cauldrons: "+orangeNotDamagedCauldrons)
+   
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
-// console.log("*********************Ejercicio 10: ")
+    console.log("*********************Ejercicio 10: ")
 
-// let arrayColours = [];
-// let arrayColoursFixed = [];
+let arrayColours = [];
+let arrayColoursFixed = [];
 
-// for(i=0 ; i<winterCauldronQuantity ; i++) 
-// {
-//     arrayColours.push(cauldrons.winter_seasson[i].color)
-// }
-
-// for(i=0 ; i<summerCauldronQuantity ; i++) 
-// {
-//     arrayColours.push(cauldrons.winter_seasson[i].color)
-// }   
-
-// for(i=0 ; i<springCauldronQuantity ; i++) 
-// {
-//     arrayColours.push(cauldrons.winter_seasson[i].color)
-// }   
-// for(i=0 ; i<autumnCauldronQuantity ; i++) 
-// {
-//     arrayColours.push(cauldrons.winter_seasson[i].color)
-// }
+for(let i=0 ; i<totalCauldrons.length ; i++) 
+    {
+        for(let j=0 ; j<totalCauldrons[i].length; j++)
+        {
+            arrayColours.push(totalCauldrons[i][j].color);        
+        }   
+    }
   
-//     for (let i = 0; i < arrayColours.length; i++) {
-//       const color = arrayColours[i];
-//       let isDuplicate = false;
+    for (let i = 0; i < arrayColours.length; i++) {
+      const color = arrayColours[i];
+      let isDuplicate = false;
   
-//       for (let j = 0; j < i; j++) {
-//         if (arrayColours[j] == color) {
-//           isDuplicate = true;
-//           break;
-//         }
-//       }
+      for (let j = 0; j < i; j++) {
+        if (arrayColours[j] == color) {
+          isDuplicate = true;
+          break;
+        }
+      }
   
-//       if (!isDuplicate) {
-//         arrayColoursFixed.push(color);
-//       }
-//     }
-//   console.log(arrayColoursFixed)
+      if (!isDuplicate) {
+        arrayColoursFixed.push(color);
+      }
+    }
+  console.log(arrayColoursFixed)

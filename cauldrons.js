@@ -1233,7 +1233,17 @@ for(i=0 ; i<winterCauldronQuantity ; i++)
 
     console.log(Math.floor((brokenCauldronQuantity / autumnCauldronQuantity) * 100)+"%")
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
+    console.log("*********************Ejercicio 7: ")
 
+    let plexiglassCauldronQuantity = 0;
+    for(i=0 ; i<winterCauldronQuantity ; i++) 
+    {
+        if( cauldrons.winter_seasson[i].type == "Plexiglass") 
+        {
+            plexiglassCauldronQuantity++;
+        }
+    }
+    console.log(Math.floor((plexiglassCauldronQuantity / winterCauldronQuantity) * 100)+"%")
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.

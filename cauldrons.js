@@ -1186,7 +1186,52 @@ for(i=0 ; i<winterCauldronQuantity ; i++)
     }
     console.log("****************")
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
+    console.log("*********************Ejercicio 7: ")
 
+    let brokenCauldronQuantity= 0;
+    console.log("WINTER: ")
+    for(i=0 ; i<winterCauldronQuantity ; i++) 
+    {
+        if( cauldrons.winter_seasson[i].damaged == true) 
+        {
+            brokenCauldronQuantity++;
+        }
+    }
+    console.log(Math.floor((brokenCauldronQuantity / winterCauldronQuantity) * 100)+"%")
+    brokenCauldronQuantity = 0
+
+    console.log("SUMMER: ")    
+    for(i=0 ; i<summerCauldronQuantity ; i++) 
+    {
+        if( cauldrons.summer_seasson[i].damaged == true) 
+        {
+            brokenCauldronQuantity++;
+        }
+    }   
+    console.log(Math.floor((brokenCauldronQuantity / summerCauldronQuantity) * 100)+"%")
+    brokenCauldronQuantity = 0
+
+    console.log("SPRING: ")
+    for(i=0 ; i<springCauldronQuantity ; i++) 
+    {
+        if( cauldrons.spring_seasson[i].damaged == true) 
+        {
+            brokenCauldronQuantity++;
+        }
+    }   
+    console.log(Math.floor((brokenCauldronQuantity / springCauldronQuantity) * 100)+"%")
+    brokenCauldronQuantity = 0
+
+    console.log("AUTUMN: ")
+    for(i=0 ; i<autumnCauldronQuantity ; i++) 
+    {
+        if( cauldrons.autumn_seasson[i].damaged == true) 
+        {
+            brokenCauldronQuantity++;
+        }
+    }
+
+    console.log(Math.floor((brokenCauldronQuantity / autumnCauldronQuantity) * 100)+"%")
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado

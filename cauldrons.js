@@ -1279,4 +1279,43 @@ const data = {
     }
     console.log(orangeNotDamagedCauldrons)
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
+console.log("*********************Ejercicio 10: ")
 
+let arrayColours = [];
+let arrayColoursFixed = [];
+
+for(i=0 ; i<winterCauldronQuantity ; i++) 
+{
+    arrayColours.push(cauldrons.winter_seasson[i].color)
+}
+
+for(i=0 ; i<summerCauldronQuantity ; i++) 
+{
+    arrayColours.push(cauldrons.winter_seasson[i].color)
+}   
+
+for(i=0 ; i<springCauldronQuantity ; i++) 
+{
+    arrayColours.push(cauldrons.winter_seasson[i].color)
+}   
+for(i=0 ; i<autumnCauldronQuantity ; i++) 
+{
+    arrayColours.push(cauldrons.winter_seasson[i].color)
+}
+  
+    for (let i = 0; i < arrayColours.length; i++) {
+      const color = arrayColours[i];
+      let isDuplicate = false;
+  
+      for (let j = 0; j < i; j++) {
+        if (arrayColours[j] == color) {
+          isDuplicate = true;
+          break;
+        }
+      }
+  
+      if (!isDuplicate) {
+        arrayColoursFixed.push(color);
+      }
+    }
+  console.log(arrayColoursFixed)

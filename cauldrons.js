@@ -1145,7 +1145,7 @@ const data = {
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
     console.log("*********************Ejercicio 6: ")
-for(i=0 ; i<winterCauldronQuantity ; i++) 
+    for(i=0 ; i<winterCauldronQuantity ; i++) 
     {
         if( cauldrons.winter_seasson[i].name == "Brassicaceae") 
         {
@@ -1245,6 +1245,38 @@ for(i=0 ; i<winterCauldronQuantity ; i++)
     }
     console.log(Math.floor((plexiglassCauldronQuantity / winterCauldronQuantity) * 100)+"%")
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
-
+    console.log("*********************Ejercicio 9: ")
+    let orangeNotDamagedCauldrons = 0
+    for(i=0 ; i<winterCauldronQuantity ; i++) 
+    {
+        if( cauldrons.winter_seasson[i].damaged == false) 
+        {
+            orangeNotDamagedCauldrons++;
+        }
+    }
+    
+    for(i=0 ; i<summerCauldronQuantity ; i++) 
+    {
+        if( cauldrons.summer_seasson[i].damaged == false) 
+        {
+            orangeNotDamagedCauldrons++;
+        }
+    }   
+    
+    for(i=0 ; i<springCauldronQuantity ; i++) 
+    {
+        if( cauldrons.spring_seasson[i].damaged == false) 
+        {
+            orangeNotDamagedCauldrons++;
+        }
+    }   
+    for(i=0 ; i<autumnCauldronQuantity ; i++) 
+    {
+        if( cauldrons.autumn_seasson[i].damaged == false) 
+        {
+            orangeNotDamagedCauldrons++;
+        }
+    }
+    console.log(orangeNotDamagedCauldrons)
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
 

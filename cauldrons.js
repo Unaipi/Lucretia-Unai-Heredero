@@ -1031,9 +1031,45 @@ const data = {
     console.log("summer: "+summerCauldronQuantity);
     console.log("spring: "+springCauldronQuantity);
     console.log("autumn: "+autumnCauldronQuantity);
-    
+
 // 3.- Mostrar los Cauldrons rotos separados por temporada
 
+    console.log("*********************Ejercicio 3: ");
+    console.log("*********************Winter: ");
+    for(i=0 ; i<winterCauldronQuantity ; i++) 
+    {
+        if( cauldrons.winter_seasson[i].damaged==true) 
+        {
+            console.log(cauldrons.winter_seasson[i].name)
+        }
+    }
+
+    console.log("*********************Summer: ");
+    for(i=0 ; i<summerCauldronQuantity ; i++) 
+    {
+        if( cauldrons.summer_seasson[i].damaged==true) 
+        {
+            console.log(cauldrons.summer_seasson[i].name)
+        }
+    }
+    
+    console.log("*********************Spring: ");
+    for(i=0 ; i<springCauldronQuantity ; i++) 
+    {
+        if( cauldrons.spring_seasson[i].damaged==true) 
+        {
+            console.log(cauldrons.spring_seasson[i].name)
+        }
+    }
+    console.log("*********************Autumn: ");
+    for(i=0 ; i<autumnCauldronQuantity ; i++) 
+    {
+        if( cauldrons.autumn_seasson[i].damaged==true) 
+        {
+            console.log(cauldrons.autumn_seasson[i].name)
+        }
+    }
+    
 // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
 
 // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas

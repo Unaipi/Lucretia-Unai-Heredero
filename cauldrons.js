@@ -1025,6 +1025,13 @@ const data = {
 
 // 2- Mostrar la cantidad de cauldrons separados por temporada
 
+    console.log("*********************Ejercicio 2: ");
+    console.log(Object.keys(cauldrons)[3]);
+    console.log("winter: "+winterCauldronQuantity);
+    console.log("summer: "+summerCauldronQuantity);
+    console.log("spring: "+springCauldronQuantity);
+    console.log("autumn: "+autumnCauldronQuantity);
+    
 // 3.- Mostrar los Cauldrons rotos separados por temporada
 
 // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
